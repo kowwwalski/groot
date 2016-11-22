@@ -1,2 +1,2 @@
-# grooth
+# groot
 as root
