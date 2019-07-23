@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Set image path:"
 read image
-#
+#linux format
 size=$(stat --format="%s" $image)
 #
 echo "Set destination disk (be careful):"
