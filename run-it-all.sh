@@ -1,5 +1,5 @@
 #!/bin/bash
-#current directory
+#just for non-interactive scripts
 dir=$(dirname "$0")
 shopt -s dotglob
 #goto each folder and run .sh scripts
