@@ -14,3 +14,5 @@ else
     lpadmin -p $prnname -L "$prnloc" -E -v socket://$prnip -P "$dir/path/to/PPD" -o printer-is-shared=false 2>/dev/null
     echo "Done!"
 fi
+#
+# use lpadmin -x $prnname for removing already installed printer
