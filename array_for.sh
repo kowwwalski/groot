@@ -8,7 +8,7 @@ declare -a arr=("56.87.164.240"
 
 for i in "${arr[@]}"
 do
-  printf "IP-address: $i" && printf \\n
+  printf "IP-address: %s" "$i" && printf \\n
   whois "$i" | grep -iEw "netname|org-name"
   printf '=%.0s' {0..32} && printf \\n
 done

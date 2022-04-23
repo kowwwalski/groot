@@ -7,11 +7,11 @@ read password
 #
 cat %/path/to/url-list% | while read list
 do
-    wget $list # read each string of url-list and download
+    wget "$list" # read each string of url-list and download
 done
 #
 # then upload each .jpg-file to destination webdav-server
 for f in *.jpg
 do
-    curl -T "$f" -u $username:$password https://webdav.your-server-name.com/$f
+    curl -T "$f" -u "$username":"$password" https://webdav.your-server-name.com/"$f"
 done

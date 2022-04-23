@@ -11,7 +11,7 @@ if [[ $(lpstat -p | awk '{print $2}' | grep -i "$prnname") ]]; then
 else
     echo "Printer $prnname not found. Installing..."
     # here we have ppd-like install, set path to ppd file
-    lpadmin -p $prnname -L "$prnloc" -E -v socket://$prnip -P "$dir/path/to/PPD" -o printer-is-shared=false 2>/dev/null
+    lpadmin -p "$prnname" -L "$prnloc" -E -v socket://"$prnip" -P "$dir/path/to/PPD" -o printer-is-shared=false 2>/dev/null
     echo "Done!"
 fi
 #
